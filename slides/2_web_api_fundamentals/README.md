@@ -220,6 +220,54 @@ Slackワークスペース内のチャットの履歴の一括取得とかもで
 
 ---
 
+# [Activity] 実際にAPIを使う
+
+性別を特定するアプリのAPIを`curl`コマンドを使って叩いてみよう
+
+```bash
+curl -X GET 'https://api.genderize.io/?name=kazuki' -i
+```
+
+> * `-X GET`でHTTPメソッドのGETを使う
+> * `-i`でヘッダ情報も含めて表示
+> * URLはシングルクオートで囲っておくと便利
+
+---
+
+# [Activity] 実際にAPIを使う
+
+性別を特定するアプリのAPIを`curl`コマンドを使って叩いてみよう
+
+![curl_genderize height:400](res/curl_genderize.png)
+
+---
+
+# [Activity] 実際にAPIを使う
+
+性別を特定するアプリのAPIを`curl`コマンドを使って叩いてみよう
+
+![curl_genderize_422 height:400](res/curl_genderize_422.png)
+
+> * 間違ったクエリでAPIを叩くとエラーが吐かれる
+> * エラーの内容などを示す3桁のコードを**HTTPレスポンスステータスコード**という
+
+---
+
+# HTTPレスポンスステータスコードとは
+
+> HTTP通信の中で、通信の結果の状態を示す3桁のコード
+
+|コード|内容|
+|-|-|
+|200|処理が正常に終了した|
+|301|ページが引っ越しした|
+|403|アクセス権限なし|
+|404|ページが見つからない|
+|500|サーバー内部エラー|
+|503|サーバー利用不可|
+
+---
+
 # 実際にAPIを作る
 
 Pythonだと[Django REST Framework](https://www.django-rest-framework.org/)や、[Flask](https://flask.palletsprojects.com/)、[FastAPI](https://fastapi.tiangolo.com/)がある。
@@ -312,6 +360,14 @@ WebSocketでは、サーバーとクライアントが一度コネクション�
     }
 }
 ```
+
+---
+
+# WebSocketの活用例
+
+* リアルタイムにデータを送受信する必要のあるアプリ
+    → 高性能なPCを手元に用意しなくても必要なデータだけリアルタイムにWebSocketで送信すれば、あとは高性能なサーバーがなんとかしてくれる!
+* TweetDeck
 
 ---
 
