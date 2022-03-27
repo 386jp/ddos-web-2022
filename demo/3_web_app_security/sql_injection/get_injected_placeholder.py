@@ -1,14 +1,18 @@
 import sqlite3
 
-db_name = 'main.db'
-conn = sqlite3.connect(db_name)
+def main():
+    db_name = 'main.db'
+    conn = sqlite3.connect(db_name)
 
-cur = conn.cursor()
+    cur = conn.cursor()
 
-name = "taro' or 'A'='A"
+    name = "taro' or 'A'='A"
 
-cur.execute(f"SELECT * FROM user WHERE name='{name}'")
+    cur.execute(f"SELECT * FROM user WHERE name='{name}'")
 
-print(cur.fetchall())
+    print(cur.fetchall())
 
-conn.close()
+    conn.close()
+
+if __name__ == '__main__':
+    main()
