@@ -505,7 +505,9 @@ IPアドレスやドメインとポート番号を組み合わせて書くとき
 
 ---
 
-# <!-- fit --> TCP vs UDPのデモ
+# [Activity] TCP vs UDPのデモ
+
+Max/MSPというソフトウェアを使ってTCPとUDPの遅延の様子を可視化
 
 ---
 

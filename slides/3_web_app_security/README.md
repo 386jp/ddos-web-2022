@@ -27,19 +27,19 @@ marp: true
 
 ---
 
-# SQLインジェクション[^1]
+# [Activity] SQLインジェクション[^1]
 
-例えば、アプリの中でユーザーのIDを入力してもらって、その該当ユーザーの情報を表示するアプリがあったとします
+例えば、アプリの中でユーザーの名前を入力してもらって、その該当ユーザーの情報を表示するアプリがあったとします
 
 ```sql
-SELECT * FROM user WHERE id=‘$ID’
+SELECT * FROM user WHERE name='$ID'
 ```
 
 `$ID`の中にユーザーの入力を入れる
 
 例えば
 ```sql
-SELECT * FROM user WHERE id=‘taro’
+SELECT * FROM user WHERE name='taro'
 ```
 なら、`taro`のユーザーデータを取得できる
 
@@ -47,31 +47,31 @@ SELECT * FROM user WHERE id=‘taro’
 
 ---
 
-# SQLインジェクション
+# [Activity] SQLインジェクション
 
 基本のクエリ
 
 > 🔍 「taro」
 
 ```sql
-SELECT * FROM user WHERE id=‘taro’
+SELECT * FROM user WHERE name='taro'
 ```
 
 では、このようにフォームに入力すると...?
-> 🔍 「taro’ or ‘A’=‘A」
+> 🔍 「taro' or 'A'='A」
 
 ---
 
-# SQLインジェクション
+# [Activity] SQLインジェクション
 
 では、このようにフォームに入力すると...?
-> 🔍 「taro’ or ‘A’=‘A」
+> 🔍 「taro' or 'A'='A」
 
 ```sql
-SELECT * FROM user WHERE id=‘taro’ or ‘A’=‘A’
+SELECT * FROM user WHERE name='taro' or 'A'='A'
 ```
 
-このSQL文の場合、id=‘taro’が成り立つ、**または‘A’=‘A’が成り立つ**クエリを抽出する
+このSQL文の場合、id='taro'が成り立つ、**または'A'='A'が成り立つ**クエリを抽出する
 
 つまり、`user`テーブルのすべての情報が流出してしまうことに...
 
@@ -113,7 +113,9 @@ Pythonの場合はSQLAlchemy, SQLModelなどがある
 
 # ハッシュとは
 
-![password_without_hash height:600](res/password_without_hash.png)
+![password_without_hash height:600](res/password_without_hash.png)[^2]
+
+[^2]: https://www.itmedia.co.jp/news/articles/2203/15/news172.html
 
 ---
 
@@ -127,7 +129,19 @@ Pythonの場合はSQLAlchemy, SQLModelなどがある
 
 ハッシュ値は不可逆: 元のパスワードを特定することはできない
 
+---
+
+# ハッシュとソルト、ストレッチング
+
 同じ値をハッシュ関数に入力すれば同じハッシュ値が帰ってくるので、パスワード認証自体はできるが、データベースの中身が流出したとしても、そのデータからパスワードを判定するのは難しいので、二次災害を防ぐことができる
+
+ハッシュと併用して、**ソルト**や**ストレッチング**という技術を用いることで更にもとのパスワードを解読させづらくする
+
+> **ソルト**
+> ハッシュ化するデータにSalt（ソルト）と呼ばれるデータをユーザー毎に付け足してからハッシュ化することで、ユーザーごとに異なるアルゴリズムでハッシュ化される
+
+> **ストレッチング**
+> 得られたハッシュ値に対して、一定回数以上のハッシュ化を繰り返す
 
 ---
 
@@ -168,6 +182,14 @@ Pythonの場合はSQLAlchemy, SQLModelなどがある
 > * OpenID Connect
 > * SAML, SSO (Single Sign-on)
 > * FIDO
+
+---
+
+# ブルートフォースアタックを許さない環境作り
+
+[';--have i been pwned?](https://haveibeenpwned.com/)というサイトで個人情報の流出を確認できる
+
+もしパスワードなどが流出してしまったら、このサイトで確認することで2次被害を防ぐことができる
 
 ---
 
