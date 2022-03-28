@@ -382,6 +382,34 @@ SSLサーバー証明書を発行する機関のことを認証局(CA= Certifica
 
 ---
 
+# [Activity] SSL証明書を確認してみよう
+
+[386.jp](https://www.386.jp)の証明書を確認してみよう
+
+まずは、URLの先頭が`https`で始まっていることを確認
+
+![ssl_cert_0 height:500](res/ssl_cert_0.png)
+
+---
+
+# [Activity] SSL証明書を確認してみよう
+
+![ssl_cert_1 height:500](res/ssl_cert_1.png)
+
+---
+
+# [Activity] SSL証明書を確認してみよう
+
+![ssl_cert_2 height:500](res/ssl_cert_2.png)
+
+---
+
+# [Activity] SSL証明書を確認してみよう
+
+![ssl_cert_3 height:500](res/ssl_cert_3.png)
+
+---
+
 # 証明書以外の方法でもクライアントを保護する
 
 近年では、SSL証明書とCA (認証局)の組合せ以外に、HSTS (HTTP Strict Transport Security)でこのドメインがSSL使っていることをブラウザ側に記憶させる技術や、Let's Encryptなどの無料SSL証明書配布サービス、常時SSLでないとGoogle等で検索順位が下がるなど、SSL技術に加え、サポートする形で様々な技術などが発達しており、情報の盗み見などへの対策がされている
