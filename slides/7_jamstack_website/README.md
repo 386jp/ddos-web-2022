@@ -1,5 +1,8 @@
 ---
 marp: true
+theme: 386jp
+header: MUDS DDoS Web系講座
+footer: Copyright 2022 @386jp All Rights Reserved.
 ---
 
 # ポートフォリオサイトのレベルを1mmだけ上げる講座
@@ -12,11 +15,11 @@ marp: true
 
 ---
 
-デザインについてはここでは扱いません!!
+##### デザインについてはここでは扱いません!!
 
 ---
 
-どう魅せるかについてはあくまでも自分の体験的な部分で話します
+##### どう魅せるかについてはあくまでも自分の体験的な部分で話します
 
 ---
 
@@ -30,7 +33,7 @@ marp: true
 
 イラストレーターなどが、自分の作品の一部を営業のツールとしてまとめたものをポートフォリオと呼んでいる。
 
-![portfolio_instagram_amiokzk bg right:33% height:100%](res/portfolio_instagram_amiokzk.png)[^1]
+![portfolio_instagram_amiokzk bg left:33% height:100%](res/portfolio_instagram_amiokzk.png)[^1]
 
 [^1]: https://www.instagram.com/amiokzk/
 
@@ -73,7 +76,7 @@ marp: true
 
 いかにヤバそうなやつに見せられるかが勝負
 
-![386_portfolio_work_details height:400](res/386_portfolio_work_details.png)
+![386_portfolio_work_details height:350](res/386_portfolio_work_details.png)
 
 何を、どういう背景を持ってやって、何を達成して、どのようなものが出来上がったのかを1スクリーンで見せる
 
@@ -152,7 +155,7 @@ QiitaとかZennを使ってもいいけど、ポートフォリオサイトと�
 
 ---
 
-# <!-- fit -->今日のメインの話題はそこではない
+##### 今日のメインの話題はそこではない
 
 ---
 
@@ -261,7 +264,7 @@ HTML, CSS直書きだとただの **「SS」**
 
 その「SS」の状態のサイトを分解・再構成して管理しやすくした状態
 
-![ssg_overview bg right:35% width:100%](res/ssg_overview.png)
+![ssg_overview bg left:35% width:100%](res/ssg_overview.png)
 
 SSGができるフレームワークの1つ: Jekyll
 
@@ -290,7 +293,7 @@ JekyllはSSGができるフレームワークの1つ
 
 いっちょ、作ってみますか!
 
-![jekyll_handson_1](res/jekyll_handson_1.png)
+![jekyll_handson_1 h:300](res/jekyll_handson_1.png)
 
 なにはともあれ、まずはレポジトリ作成
 
@@ -312,7 +315,7 @@ JekyllはSSGができるフレームワークの1つ
 
 「Sources」をこんな感じに設定して保存を押す
 
-![jekyll_handson_3](res/jekyll_handson_3.png)
+![jekyll_handson_3 h:350](res/jekyll_handson_3.png)
 
 ---
 
@@ -322,7 +325,7 @@ JekyllはSSGができるフレームワークの1つ
 
 お好きなのをどうぞ
 
-![jekyll_handson_4 height:400](res/jekyll_handson_4.png)
+![jekyll_handson_4 height:250](res/jekyll_handson_4.png)
 
 いいのが見つかったら「Select Theme」で保存
 
@@ -332,7 +335,7 @@ JekyllはSSGができるフレームワークの1つ
 
 設定ページに書いてあるURLにアクセスすればサイトの完成!
 
-![jekyll_handson_5 height:400](res/jekyll_handson_5.png)
+![jekyll_handson_5 height:300](res/jekyll_handson_5.png)
 
 別途、独自ドメインを設定することもできるし、カスタムテーマを入れることもできるから、可能性は無限大!
 
@@ -375,15 +378,15 @@ JekyllはJAMstackに分類できる
 
 ---
 
-# <!-- fit -->じゃあ、Jekyllでいいじゃん
+##### じゃあ、Jekyllでいいじゃん
 
 ---
 
-そうなんです...
+##### そうなんです...
 
 ---
 
-ただ、もう少しレベルアップしませんか?
+##### ただ、もう少しレベルアップしませんか?
 
 ---
 
@@ -501,7 +504,7 @@ Jekyllでmarkdownを書くだけでサイトが作れるようになったおか
 
 # コンテンツの管理をもっと楽にしたい
 
-![cms_wordpress_editor](res/cms_wordpress_editor.png)
+![cms_wordpress_editor h:450](res/cms_wordpress_editor.png)
 
 WordPressのコンテンツ管理画面
 
@@ -517,7 +520,7 @@ CMSでコンテンツをかんたんに管理して、サイトに表示させ�
 
 # CMSの例
 
-![cms_contentful_kpp bg right:68% width:100%](res/cms_contentful_kpp.png)
+![cms_contentful_kpp bg left:68% width:100%](res/cms_contentful_kpp.png)
 
 `386.jp`の管理画面
 
@@ -608,7 +611,7 @@ CMSでコンテンツをかんたんに管理して、サイトに表示させ�
 
 ここまで、様々なサイトの構築方法をご紹介してきました。
 
-けど、もっと見た目を気にしようよ
+##### けど、もっと見た目を気にしようよ
 
 ---
 
@@ -678,7 +681,7 @@ CMSでコンテンツをかんたんに管理して、サイトに表示させ�
 
 # [Activity] ドメインを取得してみよう
 
-![godaddy_4 bg right:25% width:100%](res/godaddy_4.png)
+![godaddy_4 bg left:25% width:100%](res/godaddy_4.png)
 
 カートに追加したら、購入に進みましょう。
 
@@ -688,7 +691,7 @@ Domain Protectionなどのオプションはなしで大丈夫。
 
 ---
 
-# <!-- fit -->っていう冗談はさておき...
+##### っていう冗談はさておき...
 
 ---
 
@@ -750,7 +753,7 @@ DNSレコードの浸透が早いことで、もし操作を誤って異なるDN
 
 Custom domainの部分に自分のドメイン・サブドメインを入力、保存
 
-![ghp_domain_1 height:400](res/ghp_domain_1.png)
+![ghp_domain_1 height:300](res/ghp_domain_1.png)
 
 ---
 
@@ -780,11 +783,11 @@ CNAMEとは、**「ドメインのエイリアス (別名)」**を設定する�
 
 確認してみよう!
 
-![ghp_domain_3 height:500](res/ghp_domain_3.png)
+![ghp_domain_3 height:350](res/ghp_domain_3.png)
 
 ---
 
-# <!-- fit --> ぼくのさいきょうのぽーとふぉりおさいとのできあがり!
+##### ぼくのさいきょうのぽーとふぉりおさいとのできあがり!
 
 ---
 
@@ -808,7 +811,7 @@ CDNってなんだ?
 
 CDN (Content Delivery Network)と呼ばれる技術で最速のルーティングを実現
 
-![cdn_map height:400](res/cdn_map.png)
+![cdn_map height:300](res/cdn_map.png)
 
 オリジナルサーバー (運営が建てたサーバー)のデータの一部を世界中の様々な場所のサーバーにコピーしておき、クライアントから一番近いサーバーから、コピーされたデータを配信する → 高速にデータを配信できる
 
@@ -856,7 +859,7 @@ GitHub Pages自体、GitHubのCDNが噛んでいるので高速だが、CloudFla
 
 CloudFlareの営業ではありませんので!!
 
-けどほんとにいい製品なんで...
+##### けどほんとにいい製品なんで...
 
 ---
 
@@ -936,6 +939,8 @@ Google Analyticsとは、
 > * **直帰率**: そのページから始まったすべてのセッションで、そのページがセッションに存在する唯一のページだった割合
 
 [^3]: https://support.google.com/analytics/answer/2525491?hl=ja
+
+GA4 (新バージョンのGoogle Analytics)では、エンゲージメント率 (サイトやアプリに対するユーザーの操作)を見るべし
 
 ---
 

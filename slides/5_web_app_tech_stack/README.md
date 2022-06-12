@@ -1,5 +1,8 @@
 ---
 marp: true
+theme: 386jp
+header: MUDS DDoS Web系講座
+footer: Copyright 2022 @386jp All Rights Reserved.
 ---
 
 # Webアプリ開発で使われる技術スタック
@@ -93,7 +96,7 @@ Gitでは、個々のプロジェクトを「リポジトリ (Repository)」と�
 Gitサーバー側のリポジトリ: 「リモートリポジトリ (Remote Repository)」
 自分のパソコンにクローンしたリポジトリ: 「ローカルリポジトリ (Local Repository)」
 
-![git_local_server_repositories](res/git_local_server_repositories.png)
+![git_local_server_repositories h:400](res/git_local_server_repositories.png)
 
 ---
 
@@ -103,7 +106,7 @@ Gitサーバー側のリポジトリ: 「リモートリポジトリ (Remote Rep
 > * Aさん: `a.txt`の1行目に「Hello」と追記
 > * Bさん: `b.txt`の1行目に「World」と追記
 
-![git_conflict_example bg right:35% width:100%](res/git_conflict_example.png)
+![git_conflict_example bg left:35% width:100%](res/git_conflict_example.png)
 
 このように、同時にファイルが変更された場合、どうファイルを変更・統合すればよさそう?
 
@@ -115,7 +118,7 @@ Gitサーバー側のリポジトリ: 「リモートリポジトリ (Remote Rep
 > * Aさん: `a.txt`の1行目に「Hello」と追記
 > * Bさん: `b.txt`の1行目に「World」と追記
 
-![git_conflict_example bg right:35% width:100%](res/git_conflict_example.png)
+![git_conflict_example bg left:35% width:100%](res/git_conflict_example.png)
 
 このような状態「**コンフリクト (Conflict)**」
 
@@ -195,7 +198,7 @@ Dockerとは、
 
 # 環境構築手法: ベアメタル
 
-![env_baremetal bg right:35% width:100%](res/env_baremetal.png)
+![env_baremetal bg left:35% width:100%](res/env_baremetal.png)
 
 > 階層は少ないが、他のPCに移植しにくい
 
@@ -210,7 +213,7 @@ Dockerとは、
 
 # 環境構築手法: VM (仮想マシン)
 
-![env_vm bg right:35% width:100%](res/env_vm.png)
+![env_vm bg left:35% width:100%](res/env_vm.png)
 
 > 他のPCに移植しやすいが、階層が多い
 
@@ -221,7 +224,7 @@ Dockerとは、
 
 # 環境構築手法: コンテナ
 
-![env_container bg right:35% width:100%](res/env_container.png)
+![env_container bg left:35% width:100%](res/env_container.png)
 
 > 他のPCに移植しやすいし、階層も比較的少ない
 
@@ -231,7 +234,7 @@ Dockerはこのコンテナに含まれる
 
 # コンテナの仕組み
 
-![env_kernel_and_os bg right:35% width:100%](res/env_kernel_and_os.png)
+![env_kernel_and_os bg left:35% width:100%](res/env_kernel_and_os.png)
 
 Linux系のOSでは、Linuxカーネルと呼ばれるものの上にそれぞれのOSの機能が載っている
 
@@ -241,7 +244,7 @@ Linux系のOSでは、Linuxカーネルと呼ばれるものの上にそれぞ�
 
 # コンテナの仕組み
 
-![env_container bg right:35% width:100%](res/env_container.png)
+![env_container bg left:35% width:100%](res/env_container.png)
 
 Linux系のOSでは、Linuxカーネルと呼ばれるものの上にそれぞれのOSの機能が載っている
 
@@ -301,6 +304,15 @@ COPY ./pytest.ini /pytest.ini
 COPY ./alembic.ini /alembic.ini
 COPY ./requirements.txt /requirements.txt
 
+```
+
+---
+
+# `Dockerfile`の例 (続き)
+
+FastAPI (Python)アプリの例
+
+```Dockerfile
 # 必要なライブラリをインストール
 RUN apt-get update && \
     apt-get install -y \
@@ -352,6 +364,16 @@ services:
       TZ: ${TZ}
     depends_on:
       - db
+
+
+
+```
+
+---
+
+# `docker-compose.yml`の例 (続き)
+
+```yaml
 
   db:
     image: postgres:13-alpine # 既存のイメージもある

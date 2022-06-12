@@ -1,5 +1,8 @@
 ---
 marp: true
+theme: 386jp
+header: MUDS DDoS Web系講座
+footer: Copyright 2022 @386jp All Rights Reserved.
 ---
 # Webアプリのデプロイで使われる技術スタック
 
@@ -12,9 +15,9 @@ Webアプリのデプロイで使われる主な技術スタックの一覧 (個
 
 ---
 
-# 作ったWebアプリを公開したい
+##### 作ったWebアプリを公開したい
 
-![server_in_the_house_top bg right:70% width:100%](res/server_in_the_house_top.jpeg)
+![server_in_the_house_top bg left:70% width:100%](res/server_in_the_house_top.jpeg)
 ![server_in_the_house_mid bg width:100%](res/server_in_the_house_mid.jpeg)
 
 ---
@@ -82,7 +85,7 @@ AWSにログイン
 
 ホーム画面
 
-![aws_home](res/aws_home.png)
+![aws_home h:450](res/aws_home.png)
 
 ---
 
@@ -90,7 +93,7 @@ AWSにログイン
 
 メニューからEC2に行く
 
-![aws_home_menu](res/aws_home_menu.png)
+![aws_home_menu h:450](res/aws_home_menu.png)
 
 ---
 
@@ -98,7 +101,7 @@ AWSにログイン
 
 サーバー一覧
 
-![aws_ec2_server_list](res/aws_ec2_server_list.png)
+![aws_ec2_server_list h:450](res/aws_ec2_server_list.png)
 
 ---
 
@@ -106,7 +109,7 @@ AWSにログイン
 
 セキュリティグループも設定できる
 
-![aws_ec2_securitygroup](res/aws_ec2_securitygroup.png)
+![aws_ec2_securitygroup h:450](res/aws_ec2_securitygroup.png)
 
 ---
 
@@ -124,7 +127,7 @@ AWS EC2では、インスタンス (サーバー)自体のファイアウォー�
 
 好きなOSを選ぶことができる
 
-![aws_ec2_os](res/aws_ec2_os.png)
+![aws_ec2_os h:450](res/aws_ec2_os.png)
 
 ---
 
@@ -172,7 +175,7 @@ armとx86ではソフトウェアからCPUに命令するときの構造 (言語
 
 スペックも自由に選択できる
 
-![aws_ec2_specs](res/aws_ec2_specs.png)
+![aws_ec2_specs h:450](res/aws_ec2_specs.png)
 
 ---
 
@@ -180,7 +183,7 @@ armとx86ではソフトウェアからCPUに命令するときの構造 (言語
 
 ストレージも好きな分だけ
 
-![aws_ec2_storage](res/aws_ec2_storage.png)
+![aws_ec2_storage h:450](res/aws_ec2_storage.png)
 
 ---
 
@@ -188,7 +191,7 @@ armとx86ではソフトウェアからCPUに命令するときの構造 (言語
 
 ファイアウォールもサーバーごと or 複数まとめて設定可能
 
-![aws_ec2_security_group](res/aws_ec2_security_group.png)
+![aws_ec2_security_group h:450](res/aws_ec2_security_group.png)
 
 ---
 
@@ -196,7 +199,7 @@ armとx86ではソフトウェアからCPUに命令するときの構造 (言語
 
 キーペアを使ってサーバーへのログインを制限
 
-![aws_ec2_keypair](res/aws_ec2_keypair.png)
+![aws_ec2_keypair h:450](res/aws_ec2_keypair.png)
 
 ---
 
@@ -328,7 +331,7 @@ SSH (Secure Shell)とは、
 
 SSH接続を使ってポートフォワーディングを行うことによって、サーバーで動かしてるアプリをローカルでもアクセスできるようにすること
 
-![ssh_tunnel_overview](res/ssh_tunnel_overview.png)
+![ssh_tunnel_overview h:400](res/ssh_tunnel_overview.png)
 
 ---
 
@@ -439,6 +442,8 @@ server {
         proxy_pass http://backend;
     }
 }
+
+
 
 ```
 

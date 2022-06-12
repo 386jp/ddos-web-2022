@@ -1,10 +1,13 @@
 ---
 marp: true
+theme: 386jp
+header: MUDS DDoS Web系講座
+footer: Copyright 2022 @386jp All Rights Reserved.
 ---
 
 # Webといえば...?
 
-# <!-- fit --> Web, Webサイト, Webアプリ...
+##### Web, Webサイト, Webアプリ...
 
 ---
 
@@ -36,7 +39,7 @@ Webサイトは主にHTML, CSSで構成されている
 
 サイトのページ内で右クリックし、`Inspect`をクリック
 
-![inspect_tool_menu](res/inspect_tool_menu.png)
+![inspect_tool_menu h:375](res/inspect_tool_menu.png)
 
 ---
 
@@ -44,7 +47,7 @@ Webサイトは主にHTML, CSSで構成されている
 
 Webサイトの中身 (HTMLやCSS)を覗くことができる。
 
-![inspect_tool_hover](res/inspect_tool_hover.png)
+![inspect_tool_hover h:375](res/inspect_tool_hover.png)
 
 ---
 
@@ -52,7 +55,7 @@ Webサイトの中身 (HTMLやCSS)を覗くことができる。
 
 サイトの要素を編集することもできる
 
-![inspect_tool_edit](res/inspect_tool_edit.png)
+![inspect_tool_edit h:375](res/inspect_tool_edit.png)
 
 ---
 
@@ -82,13 +85,13 @@ PHPやPythonのようなサーバーサイド言語や、PostgreSQLやMariaDB、
 
 初期は、HTMLやCSSを用いて、動的にコンテンツの変わらない (静的な)Webサイトが多かったが、その後、JavaScriptやFlash、更にはPHPなどを用いた動的なWebサイトが多くなってきた。
 
-が、その流れは変わってきている。
+##### が、その流れは変わってきている。
 
 ---
 
 # Webサイトの昔と今
 
-スマートフォンの登場によって、APIという考え方が浸透してきている
+##### スマートフォンの登場によって、APIという考え方が浸透してきている
 
 ---
 
@@ -246,7 +249,7 @@ curl -X GET 'https://api.genderize.io/?name=kazuki' -i
 
 性別を特定するアプリのAPIを`curl`コマンドを使って叩いてみよう
 
-![curl_genderize_422 height:400](res/curl_genderize_422.png)
+![curl_genderize_422 height:300](res/curl_genderize_422.png)
 
 > * 間違ったクエリでAPIを叩くとエラーが吐かれる
 > * エラーの内容などを示す3桁のコードを**HTTPレスポンスステータスコード**という
@@ -276,7 +279,7 @@ Pythonだと[Django REST Framework](https://www.django-rest-framework.org/)や�
 
 ---
 
-# <!-- fit --> ここから発展的内容になります!
+##### ここから発展的内容になります!
 
 ---
 
@@ -345,7 +348,12 @@ WebSocketでは、サーバーとクライアントが一度コネクション�
 
 1. **基本的に通信は切れる**
    通信は基本的に切れるものなので、再接続時の処理など、考えなければいけないことが増える
-1. **どのようなデータなのかをきちんと定義する必要がある**
+
+---
+
+# WebSocketにおいて気をつけなければいけないこと
+
+2. **どのようなデータなのかをきちんと定義する必要がある**
    APIのように、エンドポイントによって処理を変えるということができないので、どのデータなのかをきちんと明記する必要がある。JSONデータで定義すると便利かも
 ```json
 {

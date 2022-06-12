@@ -1,5 +1,8 @@
 ---
 marp: true
+theme: 386jp
+header: MUDS DDoS Web系講座
+footer: Copyright 2022 @386jp All Rights Reserved.
 ---
 
 # アプリを構築しよう...?
@@ -113,7 +116,7 @@ Pythonの場合はSQLAlchemy, SQLModelなどがある
 
 # ハッシュとは
 
-![password_without_hash height:600](res/password_without_hash.png)[^2]
+![password_without_hash height:500](res/password_without_hash.png)[^2]
 
 [^2]: https://www.itmedia.co.jp/news/articles/2203/15/news172.html
 

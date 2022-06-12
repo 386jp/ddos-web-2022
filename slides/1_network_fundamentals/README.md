@@ -1,11 +1,13 @@
 ---
 marp: true
-
+theme: 386jp
+header: MUDS DDoS Web系講座
+footer: Copyright 2022 @386jp All Rights Reserved.
 ---
 
 # ネットワークといえば...?
 
-# <!-- fit --> 「ネットワーク」と聞いて何を思い浮かべますか?
+##### 「ネットワーク」と聞いて何を思い浮かべますか?
 
 ---
 
@@ -44,7 +46,7 @@ eg: 185.199.108.153 (GitHub)
 
 # [補足] WindowsでのプライベートIPの調べ方
 
-![private_ip_on_windows](res/private_ip_on_windows.png)
+![private_ip_on_windows h:500](res/private_ip_on_windows.png)
 
 ---
 
@@ -56,7 +58,7 @@ eg: 185.199.108.153 (GitHub)
 
 # グローバルIPとプライベートIP
 
-# <!-- fit --> グローバルIPとプライベートIPって何が違うんだろう?
+##### グローバルIPとプライベートIPって何が違うんだろう?
 
 ---
 
@@ -95,7 +97,7 @@ Class Aは企業内のネットワークで使われることが多く、Class C
 
 # グローバルIPとプライベートIP
 
-![private_ip_inside_global_ip](res/private_ip_inside_global_ip.png)
+![private_ip_inside_global_ip h:500](res/private_ip_inside_global_ip.png)
 
 ---
 
@@ -119,7 +121,7 @@ Class Aは企業内のネットワークで使われることが多く、Class C
 
 # グローバルIPの枯渇問題
 
-![global_ip_status](res/global_ip_status_20170105.jpeg)[^1]
+![global_ip_status h:500](res/global_ip_status_20170105.jpeg)[^1]
 
 [^1]: https://www.nic.ad.jp/ja/ip/ipv4pool/
 
@@ -227,7 +229,7 @@ Webサイトにアクセスする場合などは**グローバルIP (ここで�
 
 # ルーティング・ルーターとは
 
-![routing_image_train](res/routing_image_train.png)
+![routing_image_train h:500](res/routing_image_train.png)
 
 ---
 
@@ -265,7 +267,7 @@ Webサイトにアクセスする場合などは**グローバルIP (ここで�
 
 CDN (Content Delivery Network)と呼ばれる技術で最速のルーティングを実現
 
-![cdn_map height:400](res/cdn_map.png)
+![cdn_map height:300](res/cdn_map.png)
 
 オリジナルサーバー (運営が建てたサーバー)のデータの一部を世界中の様々な場所のサーバーにコピーしておき、クライアントから一番近いサーバーから、コピーされたデータを配信する → 高速にデータを配信できる
 
@@ -278,7 +280,7 @@ CDN (Content Delivery Network)と呼ばれる技術で最速のルーティン�
 > Windows `tracert 386.jp`
 > macOS `traceroute 386.jp`
 
-![traceroute_386jp](res/traceroute_386jp.png)
+![traceroute_386jp h:400](res/traceroute_386jp.png)
 
 ---
 
@@ -344,7 +346,7 @@ DNS (Domain Name System)とは、
 
 # ドメインとIPアドレスを変換する
 
-![dns_with_real_ip](res/dns_with_real_ip.png)
+![dns_with_real_ip h:500](res/dns_with_real_ip.png)
 
 ---
 
@@ -453,13 +455,13 @@ IPアドレスやドメインとポート番号を組み合わせて書くとき
 
 # コネクション型プロトコル (TCPなど)
 
-![connection_type_protocol h:650](res/connection_type_protocol.webp)
+![connection_type_protocol h:500](res/connection_type_protocol.webp)
 
 ---
 
 # コネクションレス型プロトコル (UDPなど)
 
-![connectionless_type_protocol](res/connectionless_type_protocol.webp)
+![connectionless_type_protocol h:500](res/connectionless_type_protocol.webp)
 
 ---
 

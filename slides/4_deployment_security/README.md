@@ -1,5 +1,8 @@
 ---
 marp: true
+theme: 386jp
+header: MUDS DDoS Web系講座
+footer: Copyright 2022 @386jp All Rights Reserved.
 ---
 
 # サーバー運営上のセキュリティも大事
@@ -8,7 +11,7 @@ marp: true
 > 😃 : 「アプリを公開するぞ!!」
 > 👮‍♂️ : 「サーバーを建てる上でのセキュリティ、だいじょぶそ?」
 > 😱 : 「あっっ...」
-> 👮‍♂️ : 「いくら素晴らしいソフトウェアを作っててもサーバーに侵入されちゃ終わりだからね」
+> 👮‍♂️ : 「いくら素晴らしいソフトウェアを作っててもサーバーに侵入されちゃ終わりだよ」
 
 ---
 
@@ -121,7 +124,7 @@ Host ssh-demo
 
 秘密鍵をセキュアにする
 
-![linux_file_priv bg right:35% width:100%](res/linux_file_priv.png)
+![linux_file_priv bg left:35% width:100%](res/linux_file_priv.png)
 
 > **最初の1文字**
 > そのオブジェクトの種類
@@ -140,11 +143,11 @@ Host ssh-demo
 
 秘密鍵をセキュアにする
 
-![linux_file_priv bg right:35% width:100%](res/linux_file_priv.png)
+![linux_file_priv bg left:35% width:100%](res/linux_file_priv.png)
 
 `ls -l`コマンドでファイルに対する権限を確認できる
 
-![linux_file_priv_ssh height:300](res/linux_file_priv_ssh.png)
+![linux_file_priv_ssh height:200](res/linux_file_priv_ssh.png)
 
 > eg: `my-awesome-keypair.pem`ファイルはファイル所有者 (自分)は読み取り、書き込み、実行ができるが、それ以外の人はなにもできない
 
@@ -152,7 +155,7 @@ Host ssh-demo
 
 # SSHで公開鍵認証: クライアント編
 
-![linux_file_priv bg right:35% width:100%](res/linux_file_priv.png)
+![linux_file_priv bg left:35% width:100%](res/linux_file_priv.png)
 
 今回は、ファイル所有者 (自分)しか読み取り、書き込み、実行ができないようにしたいので、下記のような権限にする
 
@@ -170,7 +173,7 @@ chmod 700 id_rsa
 
 GitHubではデプロイキーという仕組みで、公開鍵認証の仕組みを使って特定のレポジトリのみアクセスできるようにできる
 
-> 公開鍵認証の概念を使ってサーバー↔GitHubプライベートリポジトリの通信を確立
+> 公開鍵認証の概念を使ってサーバー・GitHubプライベートリポジトリ間の通信を確立
 > GitHub側に鍵穴を作って、サーバー上の鍵を使ってリポジトリにアクセス
 
 ---
@@ -342,7 +345,7 @@ SSL (Secure Sockets Layer)とは、
 
 である。
 
-![ssl_overview bg right:35% width:100%](res/ssl_overview.gif)
+![ssl_overview bg left:35% width:100%](res/ssl_overview.gif)
 
 公開鍵認証の仕組みを使ってクライアントとサーバー間の通信を暗号化する
 
@@ -388,7 +391,7 @@ SSLサーバー証明書を発行する機関のことを認証局(CA= Certifica
 
 まずは、URLの先頭が`https`で始まっていることを確認
 
-![ssl_cert_0 height:500](res/ssl_cert_0.png)
+![ssl_cert_0 height:400](res/ssl_cert_0.png)
 
 ---
 
@@ -416,7 +419,7 @@ SSLサーバー証明書を発行する機関のことを認証局(CA= Certifica
 
 ---
 
-# <!-- fit -->ここから発展的内容
+##### ここから発展的内容
 
 ---
 
