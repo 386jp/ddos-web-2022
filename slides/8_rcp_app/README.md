@@ -1421,7 +1421,7 @@ alembic upgrade head
 
 # 実際にローカル環境で試してみる
 
-![api_games_result bg left:47% width:100%](res/api_games_result.png)
+![api_games_result bg right:47% width:100%](res/api_games_result.png)
 
 ---
 

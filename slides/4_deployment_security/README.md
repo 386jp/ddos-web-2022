@@ -124,7 +124,7 @@ Host ssh-demo
 
 秘密鍵をセキュアにする
 
-![linux_file_priv bg left:35% width:100%](res/linux_file_priv.png)
+![linux_file_priv bg right:35% width:100%](res/linux_file_priv.png)
 
 > **最初の1文字**
 > そのオブジェクトの種類
@@ -143,7 +143,7 @@ Host ssh-demo
 
 秘密鍵をセキュアにする
 
-![linux_file_priv bg left:35% width:100%](res/linux_file_priv.png)
+![linux_file_priv bg right:35% width:100%](res/linux_file_priv.png)
 
 `ls -l`コマンドでファイルに対する権限を確認できる
 
@@ -155,7 +155,7 @@ Host ssh-demo
 
 # SSHで公開鍵認証: クライアント編
 
-![linux_file_priv bg left:35% width:100%](res/linux_file_priv.png)
+![linux_file_priv bg right:35% width:100%](res/linux_file_priv.png)
 
 今回は、ファイル所有者 (自分)しか読み取り、書き込み、実行ができないようにしたいので、下記のような権限にする
 
@@ -345,7 +345,7 @@ SSL (Secure Sockets Layer)とは、
 
 である。
 
-![ssl_overview bg left:35% width:100%](res/ssl_overview.gif)
+![ssl_overview bg right:35% width:100%](res/ssl_overview.gif)
 
 公開鍵認証の仕組みを使ってクライアントとサーバー間の通信を暗号化する
 

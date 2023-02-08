@@ -264,7 +264,7 @@ HTML, CSS直書きだとただの **「SS」**
 
 その「SS」の状態のサイトを分解・再構成して管理しやすくした状態
 
-![ssg_overview bg left:35% width:100%](res/ssg_overview.png)
+![ssg_overview bg right:35% width:100%](res/ssg_overview.png)
 
 SSGができるフレームワークの1つ: Jekyll
 
@@ -520,7 +520,7 @@ CMSでコンテンツをかんたんに管理して、サイトに表示させ�
 
 # CMSの例
 
-![cms_contentful_kpp bg left:68% width:100%](res/cms_contentful_kpp.png)
+![cms_contentful_kpp bg right:68% width:100%](res/cms_contentful_kpp.png)
 
 `386.jp`の管理画面
 
@@ -681,7 +681,7 @@ CMSでコンテンツをかんたんに管理して、サイトに表示させ�
 
 # [Activity] ドメインを取得してみよう
 
-![godaddy_4 bg left:25% width:100%](res/godaddy_4.png)
+![godaddy_4 bg right:25% width:100%](res/godaddy_4.png)
 
 カートに追加したら、購入に進みましょう。
 

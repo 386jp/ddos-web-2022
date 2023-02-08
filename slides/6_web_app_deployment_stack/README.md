@@ -17,7 +17,7 @@ Webアプリのデプロイで使われる主な技術スタックの一覧 (個
 
 ##### 作ったWebアプリを公開したい
 
-![server_in_the_house_top bg left:70% width:100%](res/server_in_the_house_top.jpeg)
+![server_in_the_house_top bg right:70% width:100%](res/server_in_the_house_top.jpeg)
 ![server_in_the_house_mid bg width:100%](res/server_in_the_house_mid.jpeg)
 
 ---
